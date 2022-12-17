@@ -318,6 +318,7 @@ PRODUCT_PACKAGES += \
     LineageSDKOverlayOnyx \
     LineageSettingsOverlayOnyx \
     NfcOverlayOnyx \
+    OpenDeltaOverlayOnyx \
     SettingsOverlayOnyx \
     SettingsProviderOverlayOnyx \
     SettingsProviderOverlayOnyxCN \
