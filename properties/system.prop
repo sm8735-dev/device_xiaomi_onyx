@@ -5,6 +5,12 @@ persist.vendor.cne.feature=1
 ro.product.marketname=POCO F7
 ro.product.mod_device=onyx_global
 
+# Framework allowlists
+persist.vendor.camera.privapp.list=com.android.camera,org.lineageos.aperture
+
+# Google Lens
+ro.com.google.lens.oem_camera_package=com.android.camera
+
 # HWUI
 debug.hwui.skia_atrace_enabled=false
 
@@ -12,6 +18,11 @@ debug.hwui.skia_atrace_enabled=false
 media.stagefright.thumbnail.prefer_hw_codecs=true
 ro.media.recorder-max-base-layer-fps=60
 ro.media.xml_variant.profiles=_tuna_v0
+
+# MiuiCamera
+ro.miui.notch=1
+ro.miui.ui.version.name=V816
+ro.miui.ui.version.code=816
 
 # QTI
 ro.vendor.qti.va_aosp.support=1

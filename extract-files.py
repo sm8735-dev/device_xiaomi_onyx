@@ -274,6 +274,19 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libinput_shim.so')
         .remove_needed('android.hidl.base@1.0.so'),
 
+    'system/lib64/libcamera_algoup_jni.xiaomi.so': blob_fixup()
+        .add_needed('libgui_shim_miuicamera.so')
+        .sig_replace('08 AD 40 F9', '08 A9 40 F9'),
+
+    'system/lib64/libcamera_mianode_jni.xiaomi.so': blob_fixup()
+        .add_needed('libgui_shim_miuicamera.so'),
+
+    'system/lib64/libmicampostproc_client.so': blob_fixup()
+        .remove_needed('libhidltransport.so'),
+
+    'system/priv-app/MiuiCamera/MiuiCamera.apk': blob_fixup()
+        .apktool_patch('patches'),
+
     'vendor/etc/clstc_config_library.xml': blob_fixup()
         .regex_replace(r'<library>\s*<name>libdolbyclstc[\s\S]*?</library>', ''),
 
