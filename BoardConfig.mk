@@ -90,7 +90,8 @@ BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
 BOARD_KERNEL_CMDLINE := \
     swinfo.fingerprint=$(VOLTAGE_VERSION) \
     mtdoops.fingerprint=$(VOLTAGE_VERSION) \
-    bootmonitor.fingerprint=$(VOLTAGE_VERSION)
+    bootmonitor.fingerprint=$(VOLTAGE_VERSION) \
+    androidboot.init_fatal_reboot_target=recovery
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
