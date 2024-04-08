@@ -13,6 +13,8 @@ ro.com.google.lens.oem_camera_package=com.android.camera
 
 # HWUI
 debug.hwui.skia_atrace_enabled=false
+debug.hwui.use_hint_manager=true
+debug.hwui.target_cpu_time_percent=30
 
 # Media
 media.stagefright.thumbnail.prefer_hw_codecs=true
