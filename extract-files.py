@@ -287,6 +287,9 @@ blob_fixups: blob_fixups_user_type = {
     'system/priv-app/MiuiCamera/MiuiCamera.apk': blob_fixup()
         .apktool_patch('patches'),
 
+    'vendor/bin/mi_thermald': blob_fixup()
+        .binary_regex_replace(b'%d/on', b'%d/..'),
+
     'vendor/etc/clstc_config_library.xml': blob_fixup()
         .regex_replace(r'<library>\s*<name>libdolbyclstc[\s\S]*?</library>', ''),
 
