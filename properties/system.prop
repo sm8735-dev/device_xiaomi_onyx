@@ -5,9 +5,6 @@ persist.vendor.cne.feature=1
 ro.product.marketname=REDMI Turbo 4 Pro
 ro.product.mod_device=onyx
 
-# HWUI
-debug.hwui.skia_atrace_enabled=false
-
 # Media
 media.stagefright.thumbnail.prefer_hw_codecs=true
 ro.media.recorder-max-base-layer-fps=60
