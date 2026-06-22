@@ -102,15 +102,22 @@ blob_fixups: blob_fixups_user_type = {
         'odm/lib64/libflatmode.so',
         'odm/lib64/libhistprocess.so',
         'odm/lib64/libmiBrightness.so',
-        'odm/lib64/libmiSensorCtrl.so',
         'odm/lib64/libpaperMode.so',
-        'odm/lib64/librhytheyecare.so',
         'odm/lib64/libsdr2hdr.so',
         'odm/lib64/libsre.so',
         'odm/lib64/libtruetone.so',
         'odm/lib64/libvideomode.so',
         'vendor/lib64/hw/camera.qcom.so',
         'vendor/lib64/libgnss.so'
+    ): blob_fixup()
+        .replace_needed(
+            'android.hardware.sensors-V2-ndk.so',
+            'android.hardware.sensors-V3-ndk.so'
+    ),
+
+    (
+        'odm/lib64/libmiSensorCtrl.so',
+        'odm/lib64/librhytheyecare.so',
     ): blob_fixup()
         .replace_needed(
             'android.hardware.sensors-V2-ndk.so',
