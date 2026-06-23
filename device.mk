@@ -324,7 +324,8 @@ PRODUCT_PACKAGES += \
     SettingsProviderOverlayOnyxCN \
     SecureElementOverlayOnyx \
     WifiOverlayOnyx \
-    WifiOverlayOnyxCN
+    WifiOverlayOnyxCN \
+    Xiaomi8750Updater
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
