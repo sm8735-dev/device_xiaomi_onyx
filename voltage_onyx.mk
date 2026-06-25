@@ -7,13 +7,13 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Voltage stuff.
+$(call inherit-product, vendor/voltage/config/common_full_phone.mk)
 
 # Inherit from onyx device
 $(call inherit-product, device/xiaomi/onyx/device.mk)
 
-PRODUCT_NAME := lineage_onyx
+PRODUCT_NAME := voltage_onyx
 PRODUCT_DEVICE := onyx
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
