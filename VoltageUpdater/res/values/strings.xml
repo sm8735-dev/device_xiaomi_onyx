@@ -6,9 +6,9 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Changelog -->
-    <string name="menu_changelog_url" translatable="false">https://raw.githubusercontent.com/sm8750-dev/OTA/sixteen/changelog_<xliff:g id="device_name">%1$s</xliff:g>.txt</string>
+    <string name="menu_changelog_url" translatable="false">https://raw.githubusercontent.com/sm8750-dev/OTA/seventeen/changelog_<xliff:g id="device_name">%1$s</xliff:g>.txt</string>
 
     <!-- Download -->
-    <string name="updater_server_url" translatable="false">https://raw.githubusercontent.com/sm8750-dev/OTA/sixteen/{device}.json</string>
+    <string name="updater_server_url" translatable="false">https://raw.githubusercontent.com/sm8750-dev/OTA/seventeen/{device}.json</string>
 
 </resources>
