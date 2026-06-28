@@ -37,6 +37,7 @@
     vendor_persist_ntn_prop
     vendor_persist_rcs_prop
     vendor_persist_tcm_prop
+    vendor_poweroffalarm_app
     vendor_qcc_app
     vendor_qcc_authmgr_app
     vendor_qcc_lmtp_app
