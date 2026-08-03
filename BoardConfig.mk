@@ -93,9 +93,9 @@ TARGET_KERNEL_CONFIG := \
 BOARD_KERNEL_CMDLINE := \
     video=vfb:640x400,bpp=32,memsize=3072000 \
     sysctl.kernel.firmware_config.force_sysfs_fallback=1 \
-    swinfo.fingerprint=$(LINEAGE_VERSION) \
-    mtdoops.fingerprint=$(LINEAGE_VERSION) \
-    bootmonitor.fingerprint=$(LINEAGE_VERSION)
+    swinfo.fingerprint=$(YAAP_VERSION) \
+    mtdoops.fingerprint=$(YAAP_VERSION) \
+    bootmonitor.fingerprint=$(YAAP_VERSION)
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
@@ -190,11 +190,10 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 
--include vendor/lineage/config/BoardConfigReservedSize.mk
-
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := sun
+TARGET_KERNEL_ADDITIONAL_FLAGS += TARGET_BOARD_PLATFORM=$(TARGET_BOARD_PLATFORM)
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/properties/odm.prop
