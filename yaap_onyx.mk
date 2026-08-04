@@ -16,15 +16,15 @@ $(call inherit-product, device/xiaomi/onyx/device.mk)
 PRODUCT_NAME := yaap_onyx
 PRODUCT_DEVICE := onyx
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_BRAND := POCO
-PRODUCT_MODEL := 25053PC47G
+PRODUCT_BRAND := REDMI
+PRODUCT_MODEL := 25053RT47C
 
-PRODUCT_SYSTEM_NAME := onyx_global
+PRODUCT_SYSTEM_NAME := onyx
 PRODUCT_SYSTEM_DEVICE := onyx
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="onyx_global-user 15 AQ3A.250226.002 OS3.0.7.0.WOLMIXM release-keys" \
-    BuildFingerprint=POCO/onyx_global/onyx:15/AQ3A.250226.002/OS3.0.7.0.WOLMIXM:user/release-keys \
+    BuildDesc="onyx-user 16 BP2A.250605.031.A3 OS3.0.7.0.WOLCNXM release-keys" \
+    BuildFingerprint=Redmi/onyx/onyx:16/BP2A.250605.031.A3/OS3.0.7.0.WOLCNXM:user/release-keys \
     DeviceName=$(PRODUCT_SYSTEM_DEVICE) \
     DeviceProduct=$(PRODUCT_SYSTEM_NAME)
 
