@@ -2050,11 +2050,11 @@ odm/lib64/camera/com.qti.sensormodule.onyx_aac_ov20b40_front_i.bin
 odm/lib64/camera/com.qti.sensormodule.onyx_ofilm_imx882_wide_i.bin
 odm/lib64/camera/com.qti.tuned.default.bin
 odm/lib64/camera/com.qti.tuned.onyx_aac_ov08f_ultra_i.bin
-odm/lib64/camera/com.qti.tuned.onyx_aac_ov08f_ultra_i_in.bin
+odm/lib64/camera/com.qti.tuned.onyx_aac_ov08f_ultra_i_in.bin|158f2c1a0b54570e9db4d1efcf6f65e0cbe2a720
 odm/lib64/camera/com.qti.tuned.onyx_aac_ov20b40_front_i.bin
-odm/lib64/camera/com.qti.tuned.onyx_aac_ov20b40_front_i_in.bin
+odm/lib64/camera/com.qti.tuned.onyx_aac_ov20b40_front_i_in.bin|d736e09a0298a5943f94a8b92f10c33f29759bac
 odm/lib64/camera/com.qti.tuned.onyx_ofilm_imx882_wide_i.bin
-odm/lib64/camera/com.qti.tuned.onyx_ofilm_imx882_wide_i_in.bin
+odm/lib64/camera/com.qti.tuned.onyx_ofilm_imx882_wide_i_in.bin|f8aa898e84b7b71d4dabfe955ace25ae64261d27
 vendor/lib64/camera/com.qti.sensormodule.qti_tpg0_sm7750.bin
 vendor/lib64/camera/com.qti.sensormodule.qti_tpg1_sm7750.bin
 vendor/lib64/camera/com.qti.sensormodule.qti_tpg1_sm7750_dummy.bin
@@ -2644,13 +2644,6 @@ vendor/lib64/libhdcp1prov.so
 vendor/lib64/libhdcp2p2prov.so
 vendor/lib64/libhdcpsrm.so
 vendor/lib64/libmm-hdcpmgr.so
-
-# Hotword enrollment
-product/etc/permissions/privapp-permissions-google-audio-system.xml:product/etc/permissions/privapp-permissions-hotword.xml
-product/priv-app/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND.apk
-product/priv-app/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND.apk
-system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
-system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
 # Kernel
 vendor/bin/init.qti.write.sh
