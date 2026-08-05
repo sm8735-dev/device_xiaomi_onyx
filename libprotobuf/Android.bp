@@ -1,0 +1,38 @@
+cc_prebuilt_library_shared {
+    name: "libprotobuf-cpp-full-21.12-vendorcompat",
+    stem: "libprotobuf-cpp-full-21.12",
+    vendor: true,
+    strip: {
+        none: true,
+    },
+    shared_libs: [
+        "libc++",
+        "liblog",
+        "libz",
+    ],
+    target: {
+        android_arm64: {
+            srcs: ["libprotobuf-cpp-full-21.12.so"],
+        },
+    },
+    compile_multilib: "64",
+}
+
+cc_prebuilt_library_shared {
+    name: "libprotobuf-cpp-lite-21.12-vendorcompat",
+    stem: "libprotobuf-cpp-lite-21.12",
+    vendor: true,
+    strip: {
+        none: true,
+    },
+    shared_libs: [
+        "libc++",
+        "liblog",
+    ],
+    target: {
+        android_arm64: {
+            srcs: ["libprotobuf-cpp-lite-21.12.so"],
+        },
+    },
+    compile_multilib: "64",
+}
