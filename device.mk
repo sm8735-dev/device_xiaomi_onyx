@@ -20,20 +20,15 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
 
 # A/B
-ifneq ($(TARGET_BUILD_GAPPS),true)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
-PRODUCT_RO_FILE_SYSTEM := ext4
-else
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/vabc_features.mk)
 PRODUCT_VIRTUAL_AB_COMPRESSION_METHOD := lz4
 PRODUCT_RO_FILE_SYSTEM := erofs
 PRODUCT_VENDOR_PROPERTIES += ro.virtual_ab.compression.threads=true
-endif
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
-    FILESYSTEM_TYPE_system=$(PRODUCT_RO_FILE_SYSTEM) \
+    FILESYSTEM_TYPE_system=erofs \
     POSTINSTALL_OPTIONAL_system=true
 
 PRODUCT_PACKAGES += \
