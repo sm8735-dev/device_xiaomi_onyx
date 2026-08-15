@@ -202,3 +202,18 @@ service vendor.cnss_diag /system/vendor/bin/cnss_diag -q -f -t HELIUM
 on early-boot && property:persist.vendor.pcie.boot_option=*
     write /sys/bus/platform/devices/1c00000.qcom,pcie/debug/boot_option ${persist.vendor.pcie.boot_option}
     write /sys/bus/platform/devices/1c08000.qcom,pcie/debug/boot_option ${persist.vendor.pcie.boot_option}
+
+# Polling rate
+on property:debug.high_touch_rate=1
+    setprop persist.vendor.high_touch_rate 1
+    write /proc/xm_htc_report_rate 1
+
+on property:debug.high_touch_rate=0
+    setprop persist.vendor.high_touch_rate 0
+    write /proc/xm_htc_report_rate 0
+
+on property:persist.vendor.high_touch_rate=1 && property:vendor.post_boot.parsed=1
+    write /proc/xm_htc_report_rate 1
+
+on property:persist.vendor.high_touch_rate=0 && property:vendor.post_boot.parsed=1
+    write /proc/xm_htc_report_rate 0
