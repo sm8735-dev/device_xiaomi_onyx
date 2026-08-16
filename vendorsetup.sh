@@ -1,3 +1,9 @@
+# Compat
+cd hardware/lineage/compat
+git fetch https://github.com/sm8735-dev/hardware_lineage_compat seventeen
+git cherry-pick f770e5dff34084356d90a967b17d51a87e55fa0a
+croot
+
 # Fw/AV
 cd frameworks/av
 git fetch https://github.com/sm8735-dev/frameworks_av sixteen
