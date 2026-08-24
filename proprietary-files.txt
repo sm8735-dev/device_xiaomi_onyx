@@ -2490,7 +2490,7 @@ vendor/etc/display/sm8750_sr_3x_y384x640.dlc
 vendor/etc/display/sm8750_sr_3x_y640x384.dlc
 
 # Fingerprint
-odm/lib64/anc.hal.so;DISABLE_CHECKELF
+odm/lib64/anc.hal.so
 odm/lib64/hw/fingerprint.goodix_fod.so:odm/lib64/hw/fingerprint.goodix_fod.default.so;FIX_SONAME
 odm/lib64/hw/fingerprint.jiiov.so:odm/lib64/hw/fingerprint.jiiov.default.so;FIX_SONAME
 odm/lib64/libgf_hal.so
