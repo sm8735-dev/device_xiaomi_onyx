@@ -263,7 +263,7 @@ PRODUCT_COPY_FILES += \
 
 # IR
 PRODUCT_PACKAGES += \
-    android.hardware.ir-service.onyx
+    android.hardware.ir-service.lineage
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.consumerir.xml
@@ -290,6 +290,15 @@ PRODUCT_COPY_FILES += \
 
 # Kernel
 PRODUCT_ENABLE_UFFD_GC := true
+
+# Lineage Health
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
+
+$(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/xm_power/charger/smart_charge/smart_night)
+$(call soong_config_set,lineage_health,charging_control_charging_enabled,0)
+$(call soong_config_set,lineage_health,charging_control_charging_disabled,1)
+$(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,false)
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -332,9 +341,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/com.nxp.mifare.xml
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-yaap
-
 PRODUCT_PACKAGES += \
     ApertureOverlayOnyx \
     CarrierConfigOverlayOnyx \
@@ -346,7 +352,6 @@ PRODUCT_PACKAGES += \
     LineageSDKOverlayOnyx \
     LineageSettingsOverlayOnyx \
     NfcOverlayOnyx \
-    OpenDeltaOverlayOnyx \
     SettingsOverlayOnyx \
     SettingsProviderOverlayOnyx \
     SettingsProviderOverlayOnyxCN \
@@ -376,9 +381,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/properties/odm_CN.prop:$(TARGET_COPY_OUT_ODM)/etc/odm_CN.prop \
     $(LOCAL_PATH)/properties/odm_GL.prop:$(TARGET_COPY_OUT_ODM)/etc/odm_GL.prop \
     $(LOCAL_PATH)/properties/odm_IN.prop:$(TARGET_COPY_OUT_ODM)/etc/odm_IN.prop
-
-# Platform
-TARGET_BOARD_PLATFORM := sun
 
 # QSPA
 PRODUCT_PACKAGES += \
@@ -413,8 +415,8 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/google/interfaces \
     hardware/google/pixel/power-libperfmgr \
-    hardware/lineage/interfaces/power-libperfmgr \
     hardware/qcom-caf/common/libqti-perfd-client \
+    hardware/voltage/interfaces/power-libperfmgr \
     hardware/xiaomi
 
 # Telephony

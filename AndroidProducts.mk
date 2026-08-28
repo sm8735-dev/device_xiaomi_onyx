@@ -4,4 +4,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/yaap_onyx.mk
+    $(LOCAL_DIR)/voltage_onyx.mk

@@ -163,9 +163,6 @@ vendor.dtool. u:object_r:vendor_fp_prop:s0
 vendor.fps_hal. u:object_r:vendor_fp_prop:s0
 vendor.panel.display. u:object_r:vendor_fp_prop:s0
 
-# Ir
-vendor.ir.carrier_freqs u:object_r:vendor_ir_prop:s0
-
 # Mlipay
 odm.security.rootpub.load u:object_r:vendor_payment_security_prop:s0
 odm.security.rootpub.trigger u:object_r:vendor_payment_security_prop:s0
