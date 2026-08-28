@@ -7,7 +7,6 @@ ro.product.mod_device=onyx
 
 # Media
 media.stagefright.thumbnail.prefer_hw_codecs=true
-media.settings.xml=/vendor/etc/media_profiles_tuna_v0.xml
 ro.media.recorder-max-base-layer-fps=60
 ro.media.xml_variant.profiles=_tuna_v0
 
